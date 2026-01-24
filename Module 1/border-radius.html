@@ -7,35 +7,53 @@
     <title>Document</title>
 </head>
 <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+    }
+
     #web-design {
         align-self: center;
         border: 2px solid red;
         padding: 10px;
         width: 300px;
+        height: 200px;
         box-shadow: 5px 10px;
-        
+        background-color: lightgreen;
+        transition: transform 0.2s ease;
+
+
+
         border-radius: 25px;
     }
- h2 {
-    text-shadow: 2px 2px green;
- }
- a:hover {
-    background-color: green;
-    font-size: 20px;
-    text-underline-position: below;
- }
- div.a {
-    width: 150px;
-    height: 200px;
-    transform: rotate(15deg);
- }
+
+    h2 {
+        text-shadow: 2px 2px green;
+    }
+
+    a:hover {
+        background-color: green;
+        font-size: 20px;
+        text-underline-position: below;
+    }
+
+    #web-design:hover {
+        background-color: rgb(69, 240, 69);
+        transform: scale(1.2);
+        transform: rotate(5deg);
+    }
 </style>
 
 <body>
-    <div class="a" id="web-design">
+    <div id="web-design">
         <h2>Web Design</h2>
         <p>Learn Web Design Here with beautiful website designs etc.</p>
-        <p id="hyperlink"><a href="https://www.london.ac.uk/study/courses/undergraduate/bsc-computer-science?&gclsrc=aw.ds&gad_source=1&gad_campaignid=14873997259&gbraid=0AAAAACOaFZsQ41dPODwmPcsGAoVc_I7xz&gclid=Cj0KCQiA-NHLBhDSARIsAIhe9X0HJel13mxnhTi-UUsf25h9C-c_ki0dGkf_Au3eRpQR0jukls2GHqYaAuwGEALw_wcB">Click here to get started</a></p>
+        <p id="hyperlink"><a
+                href="https://www.london.ac.uk/study/courses/undergraduate/bsc-computer-science?&gclsrc=aw.ds&gad_source=1&gad_campaignid=14873997259&gbraid=0AAAAACOaFZsQ41dPODwmPcsGAoVc_I7xz&gclid=Cj0KCQiA-NHLBhDSARIsAIhe9X0HJel13mxnhTi-UUsf25h9C-c_ki0dGkf_Au3eRpQR0jukls2GHqYaAuwGEALw_wcB">Click
+                here to get started</a></p>
 
 
     </div>
