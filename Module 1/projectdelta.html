@@ -24,26 +24,40 @@
     li:hover {
         color: black;
     }
-    #congrats{
+
+    #congrats {
         font-family: Arial, Helvetica, sans-serif;
         color: green;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
 </style>
 
 <body>
-    <div id="project-delta">
-        <h3><u>Project Delta</u></h3>
+    <div>
+        <div id="project-delta">
+            <h3><u>Project Delta</u></h3>
+        </div>
+        <h4 class="a">Try highlighting this text or clicking the input</h4>
+        <ul id="ul">
+            <li>Design Mockups</li> <br>
+            <li>API Integration</li> <br>
+            <li>Final Testing</li>
+        </ul>
+        <input type="checkbox" id="pending-review" name="pending-review" value="pending-review">
+        <label for="pending-review"> Pending Review</label><br>
+        <h5 id="congrats">Congratulations on Completing this</h5>
+        <input type="text" placeholder="Add a comment..."> <br><br>
+        <button>Submit Update
+
+        </button>
     </div>
-    <h4 class="a">Try highlighting this text or clicking the input</h4>
-    <ul id="ul">
-        <li>Design Mockups</li> <br>
-        <li>API Integration</li> <br>
-        <li>Final Testing</li>
-    </ul>
-    <input type="checkbox" id="pending-review" name="pending-review" value="pending-review">
-    <label for="pending-review"> Pending Review</label><br>
-    <h5 id="congrats">Congratulations on Completing this</h5>
-    
+
 </body>
 
 </html>
