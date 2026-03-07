@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Football Scores</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .match {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .score {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .lineups {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .team {
+            width: 45%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container text-center mt-5">
+
+        <h1>⚽ Football Scores</h1>
+
+        <div class="match">
+
+            <h3>Real Madrid vs Barcelona</h3>
+
+            <div class="score">3 - 2</div>
+
+            <button class="btn btn-primary mt-3" onclick="showLineups()">
+                Show Lineups
+            </button>
+
+            <div id="lineups" class="lineups">
+
+                <div class="team">
+
+                    <h5>Real Madrid</h5>
+
+                    <ul>
+                        <li>Courtois</li>
+                        <li>Carvajal</li>
+                        <li>Rudiger</li>
+                        <li>Alaba</li>
+                        <li>Mendy</li>
+                        <li>Tchouameni</li>
+                        <li>Valverde</li>
+                        <li>Bellingham</li>
+                        <li>Rodrygo</li>
+                        <li>Vinicius Jr</li>
+                        <li>Mbappe</li>
+                    </ul>
+
+                </div>
+
+                <div class="team">
+
+                    <h5>Barcelona</h5>
+
+                    <ul>
+                        <li>Ter Stegen</li>
+                        <li>Kounde</li>
+                        <li>Araujo</li>
+                        <li>Christensen</li>
+                        <li>Balde</li>
+                        <li>Pedri</li>
+                        <li>De Jong</li>
+                        <li>Gundogan</li>
+                        <li>Yamal</li>
+                        <li>Lewandowski</li>
+                        <li>Raphinha</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function showLineups() {
+
+            var lineup = document.getElementById("lineups");
+
+            if (lineup.style.display === "none") {
+                lineup.style.display = "block";
+            }
+            else {
+                lineup.style.display = "none";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
