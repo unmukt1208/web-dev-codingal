@@ -10,27 +10,27 @@
 </head>
 
 <body class="d-flex align-items-center justify-content-center bg-info p-5">
-   <div class="border bg-primary p-5 rounded-4 m-5">
-<label for="num1">Enter desired number</label>
-    <input type="number" name="num1" id="num1">
-    <br><br>
-    <label for="num2">Enter second desired number</label>
-    <input type="number" name="num2" id="num2"> <br><br>
-    <button type="button" class="btn btn-warning" onclick="mul()">*</button>
-    <p id="answer"></p>
-   </div>
-    
-   <script>
-   function mul() {
-        var num1 = Number(document.getElementById("num1").value);
-        var num2 = Number(document.getElementById("num2").value);
-        var mul = num1 * num2;
-        document.getElementById("answer").innerHTML =
-            "The answer is: " + mul
+    <div class="border bg-primary p-5 rounded-4 m-5">
+        <label for="num1">Enter desired number</label>
+        <input type="number" name="num1" id="num1">
+        <br><br>
+        <label for="num2">Enter second desired number</label>
+        <input type="number" name="num2" id="num2"> <br><br>
+        <button type="button" class="btn btn-warning" onclick="mul()">*</button>
+        <p id="answer"></p>
+    </div>
 
-    }
+    <script>
+        function mul() {
+            var num1 = Number(document.getElementById("num1").value);
+            var num2 = Number(document.getElementById("num2").value);
+            var mul = num1 * num2;
+            document.getElementById("answer").innerHTML =
+                "The answer is: " + mul
+
+        }
     </script>
-   
+
 
 
 

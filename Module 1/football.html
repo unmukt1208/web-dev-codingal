@@ -3,40 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Football Scores</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Mini Dash Game</title>
 
     <style>
         body {
-            background: #1a1a1a;
+            margin: 0;
+            background: #111;
+            overflow: hidden;
+            font-family: Arial;
             color: white;
+            text-align: center;
         }
 
-        .match {
-            background: white;
-            color: black;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-        }
-
-        .score {
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        .lineups {
-            display: none;
-            margin-top: 15px;
-        }
-
-        .team {
-            width: 45%;
-            display: inline-block;
-            vertical-align: top;
+        canvas {
+            background: #222;
+            display: block;
+            margin: auto;
         }
     </style>
 
@@ -44,82 +26,112 @@
 
 <body>
 
-    <div class="container text-center mt-5">
+    <h2>Mini Dash Game</h2>
+    <p>Press SPACE to jump</p>
 
-        <h1>⚽ Football Scores</h1>
-
-        <div class="match">
-
-            <h3>Real Madrid vs Barcelona</h3>
-
-            <div class="score">3 - 2</div>
-
-            <button class="btn btn-primary mt-3" onclick="showLineups()">
-                Show Lineups
-            </button>
-
-            <div id="lineups" class="lineups">
-
-                <div class="team">
-
-                    <h5>Real Madrid</h5>
-
-                    <ul>
-                        <li>Courtois</li>
-                        <li>Carvajal</li>
-                        <li>Rudiger</li>
-                        <li>Alaba</li>
-                        <li>Mendy</li>
-                        <li>Tchouameni</li>
-                        <li>Valverde</li>
-                        <li>Bellingham</li>
-                        <li>Rodrygo</li>
-                        <li>Vinicius Jr</li>
-                        <li>Mbappe</li>
-                    </ul>
-
-                </div>
-
-                <div class="team">
-
-                    <h5>Barcelona</h5>
-
-                    <ul>
-                        <li>Ter Stegen</li>
-                        <li>Kounde</li>
-                        <li>Araujo</li>
-                        <li>Christensen</li>
-                        <li>Balde</li>
-                        <li>Pedri</li>
-                        <li>De Jong</li>
-                        <li>Gundogan</li>
-                        <li>Yamal</li>
-                        <li>Lewandowski</li>
-                        <li>Raphinha</li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+    <canvas id="game" width="800" height="300"></canvas>
 
     <script>
 
-        function showLineups() {
+        const canvas = document.getElementById("game")
+        const ctx = canvas.getContext("2d")
 
-            var lineup = document.getElementById("lineups");
+        let player = {
+            x: 100,
+            y: 200,
+            size: 30,
+            velocity: 0,
+            gravity: 0.6,
+            jump: -12
+        }
 
-            if (lineup.style.display === "none") {
-                lineup.style.display = "block";
+        let spikes = []
+        let score = 0
+        let gameOver = false
+
+        function spawnSpike() {
+
+            spikes.push({
+                x: 800,
+                y: 220,
+                size: 30
+            })
+
+        }
+
+        setInterval(spawnSpike, 1500)
+
+        document.addEventListener("keydown", function (e) {
+
+            if (e.code === "Space" && player.y >= 200) {
+                player.velocity = player.jump
             }
-            else {
-                lineup.style.display = "none";
+
+            if (gameOver && e.code === "Space") {
+                location.reload()
+            }
+
+        })
+
+        function update() {
+
+            ctx.clearRect(0, 0, 800, 300)
+
+            player.velocity += player.gravity
+            player.y += player.velocity
+
+            if (player.y > 200) {
+                player.y = 200
+            }
+
+            ctx.fillStyle = "cyan"
+            ctx.fillRect(player.x, player.y, player.size, player.size)
+
+            for (let i = 0; i < spikes.length; i++) {
+
+                let spike = spikes[i]
+
+                spike.x -= 5
+
+                ctx.fillStyle = "red"
+                ctx.beginPath()
+                ctx.moveTo(spike.x, 250)
+                ctx.lineTo(spike.x + 15, 220)
+                ctx.lineTo(spike.x + 30, 250)
+                ctx.fill()
+
+                if (
+                    player.x < spike.x + 30 &&
+                    player.x + player.size > spike.x &&
+                    player.y < spike.y + 30 &&
+                    player.y + player.size > spike.y
+                ) {
+                    gameOver = true
+                }
+
+            }
+
+            ctx.fillStyle = "white"
+            ctx.font = "20px Arial"
+            ctx.fillText("Score: " + score, 650, 30)
+
+            if (!gameOver) {
+                score++
+                requestAnimationFrame(update)
+            } else {
+
+                ctx.fillStyle = "white"
+                ctx.font = "40px Arial"
+                ctx.fillText("Game Over", 300, 150)
+
+                ctx.font = "20px Arial"
+                ctx.fillText("Press SPACE to restart", 290, 190)
+
             }
 
         }
+
+        update()
 
     </script>
 
