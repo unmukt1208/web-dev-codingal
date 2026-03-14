@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arrays in JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="p-5">
+    <h1>Arrays and their Properties.</h1>
+
+    <p id="display" class="m-3"></p>
+    <button type="button" class="btn btn-success m-3" onclick="remove_element()">Remove one Element</button>
+    <button type="button" class="btn btn-danger m-3" onclick="remove_all()">Remove All</button>
+    <p id="output" class="m-3"></p>
+
+    <script>
+        var programming_languages = [
+            "Python", "Java", "C", "C++", "C#", "JavaScript", "TypeScript", "Go", "Rust", "Swift", "Kotlin", "PHP", "Ruby", "MATLAB", "R", "Dart", "Julia", "Scala", "Haskell", "Elixir", "Lua", "Objective-C", "Groovy", "Assembly", "Bash", "PowerShell", "Fortran", "COBOL", "Crystal", "Nim"]
+        document.getElementById("display").innerHTML = programming_languages
+        function remove_element() {
+            programming_languages.pop()
+            document.getElementById("output").innerHTML = programming_languages
+        }
+       
+        function remove_all() {
+            programming_languages=[]
+            document.getElementById("output").innerHTML = programming_languages
+        
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
