@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loopst</title>
+</head>
+<body>
+    <h1>Intro to Loops in HTML</h1>
+    <p id="output"></p>
+    <script>
+        var output = ""
+        var i = 1
+        while(i<=10){
+            output+=i + " "
+            i++
+        }
+        document.getElementById("output").innerHTML=output
+    </script>
+</body>
+</html>

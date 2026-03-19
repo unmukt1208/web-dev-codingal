@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button{
+            background-color: aqua;
+        }
+        body{
+            background-color: chartreuse;
+        }
+        #h1{
+            background-color: aqua;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Click The Button to get a Greeting</h1>
+    <button onclick="greeting()" id="button">Click Me!</button>
+    <p id="output"></p>
+
+    <script>
+        function greeting() {
+           var hours = new Date().getHours()
+           if (hours<12){
+            document.getElementById("output").innerHTML="Good Morning"
+           }
+           else if(hours<17){
+            document.getElementById("output").innerHTML="Good Afternoon"
+           }
+           else if(hours<20){
+            document.getElementById("output").innerHTML="Good Evening"
+           }
+           else{
+            document.getElementById("output").innerHTML="Good Night"
+           }
+
+        }
+    </script>
+</body>
+</html>

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="d-flex justify-content-center align-items"><h1>Form Validation using HTML DOM</h1>
+    <div class=""><h1>Form Validation using HTML DOM</h1>
     <label for="username">Username: </label> <input type="text" name="username" id="username"><br><br> <label
         for="email">E-Mail: </label> <input type="email" name="email" id="email"><br><br>
     <label for="password">Password: </label> <input type="password" name="password" id="password"> <br><br>
@@ -28,7 +28,7 @@
             const email = document.getElementById("email").value
             const password = document.getElementById("password").value
             if(username===correct_username && password===correct_password && email===correct_email) {
-                document.getElementById("output").innerText = "You've Succesfuly Logged In."
+                document.geteElementById("output").innerText = "You've Succesfuly Logged In."
             } 
             else{
                 document.getElementById("output").innerText="Log In Failed, Please Try Again."
