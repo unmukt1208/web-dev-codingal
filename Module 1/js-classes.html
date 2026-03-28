@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Classes</title>
+</head>
+
+<body>
+    <h1>JavaScript Classes</h1>
+    <p id="output"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <script>
+        class Programmer {
+            constructor(name, salary, experience, programming_language, company, birth_year) {
+                this.name = name
+                this.salary = salary
+                this.experience = experience
+                this.programming_language = programming_language
+                this.company = company
+                this.birth_year = birth_year
+            }
+            findAge() {
+                let date = new Date()
+                return date.getFullYear() - this.birth_year
+
+            }
+
+        }
+        const programmer1 = new Programmer("John", 5000, 3, "JavaScript", "Amazon", 1990)
+        document.getElementById("output").innerText = "Hi my name is " + programmer1.name + ". My salary is " + programmer1.salary + ". I have " + programmer1.experience + " years of experience. My main programming language is " + programmer1.programming_language + ". I work at " + programmer1.company + ". My birth year is " + programmer1.birth_year + "." + "My current age is " + programmer1.findAge()
+
+
+
+        const programmer2 = new Programmer("Patrick", 8000, 5, "Python", "Google", 2000)
+        document.getElementById("output2").innerText = "Hi my name is " + programmer2.name + ". My salary is " + programmer2.salary + ". I have " + programmer2.experience + " years of experience. My main programming language is " + programmer2.programming_language + ". I work at " + programmer2.company + ". My birth year is " + programmer2.birth_year + ". " + "My current age is " + programmer2.findAge()
+        class WebDev extends Programmer{
+            constructor(new_skill, name, salary, experience, programming_language, company, birth_year){
+                super(name, salary, experience, programming_language, company, birth_year)
+                this.new_skill=new_skill
+                
+            }
+            
+            
+        }
+        const webdev1= new WebDev("Figma", "Jake", 7000, 2, "JavaScript", "Microsoft", 2002)
+        document.getElementById("output3").innerText = "Hi my name is " + webdev1.name + ". My salary is " + webdev1.salary + ". I have " + webdev1.experience + " years of experience. My main programming language is " + webdev1.programming_language + ". I work at " + webdev1.company + ". My birth year is " + webdev1.birth_year + ". " +"As a web developer, my unique skill is "+webdev1.new_skill
+
+
+    </script>
+</body>
+
+</html>

@@ -7,10 +7,20 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <style>
+            body {
+                background-color: lightblue;
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+            #b{
+                background-color: rgb(255,165,0);
+            }
+        </style>
 </head>
 
 <body>
-    <div class=""><h1>Form Validation using HTML DOM</h1>
+    <div class="container mt-4 border border-danger rounded-4 p-5 m-5 border-5" id="b"><h1>Form Validation using HTML DOM</h1>
     <label for="username">Username: </label> <input type="text" name="username" id="username"><br><br> <label
         for="email">E-Mail: </label> <input type="email" name="email" id="email"><br><br>
     <label for="password">Password: </label> <input type="password" name="password" id="password"> <br><br>
@@ -28,7 +38,7 @@
             const email = document.getElementById("email").value
             const password = document.getElementById("password").value
             if(username===correct_username && password===correct_password && email===correct_email) {
-                document.geteElementById("output").innerText = "You've Succesfuly Logged In."
+                document.getElementById("output").innerText = "You've Succesfully Logged In."
             } 
             else{
                 document.getElementById("output").innerText="Log In Failed, Please Try Again."
