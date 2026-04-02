@@ -9,10 +9,14 @@
 
 <body>
     <h1>JavaScript Classes</h1>
+    <p id="profiles"></p>
     <p id="output"></p>
     <p id="output2"></p>
     <p id="output3"></p>
+   
     <script>
+        
+        
         class Programmer {
             constructor(name, salary, experience, programming_language, company, birth_year) {
                 this.name = name
@@ -28,9 +32,10 @@
 
             }
 
+
         }
         const programmer1 = new Programmer("John", 5000, 3, "JavaScript", "Amazon", 1990)
-        document.getElementById("output").innerText = "Hi my name is " + programmer1.name + ". My salary is " + programmer1.salary + ". I have " + programmer1.experience + " years of experience. My main programming language is " + programmer1.programming_language + ". I work at " + programmer1.company + ". My birth year is " + programmer1.birth_year + "." + "My current age is " + programmer1.findAge()
+        document.getElementById("output").innerText = "Hi my name is " + programmer1.name + ". My salary is " + programmer1.salary + ". I have " + programmer1.experience + " years of experience. My main programming language is "  + programmer1.programming_language + ". I work at " + programmer1.company + ". My birth year is " + programmer1.birth_year + "." + "My current age is " + programmer1.findAge()
 
 
 

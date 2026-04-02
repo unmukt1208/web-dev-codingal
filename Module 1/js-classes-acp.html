@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Inheritance</h2>
+    <p id="greetings"></p>
+    <p id="details"></p>
+    <p id="details2"></p>
+    
+    <script>
+        class Student{
+            constructor(grade,birthdate,fav_subject,school,age){
+                this.grade = grade
+                this.birthdate = birthdate
+                this.fav_subject = fav_subject
+                this.school = school
+                this.age = age
+            }
+        }
+        const student1 = new Student(7,"03/10/2012", "Maths", "ISHR", 13)
+        document.getElementById("details").innerText = "Hi my grade level is " + student1.grade + ". My birthdate is " +student1.birthdate + ". My favorite Subject is " + student1.fav_subject + ". My school is " + student1.school + ". My age is " + student1.age
+        class Student2 extends Student{
+            constructor(fav_sport, grade, birthdate, fav_subject, school, age){
+                super(grade, birthdate, fav_subject, school, age)
+                this.fav_sport = fav_sport
+            }
+        }
+        const student2 = new Student2("Football", 6, "05/05/2013", "Science", "North Middle School", 11)
+        document.getElementById("details2").innerText = "Hi my favorite sport is " + student2.fav_sport + ". My grade level is " + student2.grade + ". My birthdate is " + student2.birthdate + ". My favorite Subject is " + student2.fav_subject + ". My school is " + student2.school + ". My age is " + student2.age
+        document.getElementById("greetings").innerText = "Hello! Please read the followring descriptions. Thanks."
+    </script>
+</body>
+</html>
