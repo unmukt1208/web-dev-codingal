@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Array Operations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="p-5">
+    <h1>Array Operations</h1>
+    <p id="display"></p>
+
+    <button type="button" class="btn btn-outline-warning" onclick="sort_asc()">Sort Array Ascending</button>
+    <button type="button" class="btn btn-outline-danger" onclick="sort_dsc()">Sort Array Descending</button>
+    <button type="button" class="btn btn-outline-secondary" onclick="reverse()">Reverse Array</button>
+    <button type="button" class="btn btn-outline-success" onclick="find_square()">Find Square
+
+    </button>
+
+
+
+    <script>
+        let numbers = [1, 3, 7, 4, 5, 10, 15, 2]
+        document.getElementById("display").innerHTML=numbers
+        function sort_asc() {
+            numbers.sort(function (a, b) {
+                return a - b
+            })
+            document.getElementById("display").innerHTML = numbers
+        }
+        function sort_dsc() {
+            numbers.sort(function (a, b) {
+                return b - a
+            })
+            document.getElementById("display").innerHTML = numbers
+        }
+        function reverse() {
+            numbers.reverse()
+            document.getElementById("display").innerHTML=numbers
+        }
+        function find_square() {
+            function square(n) {
+                return n * n
+            }
+            let squared_array = numbers.map(square)
+            document.getElementById("display").innerHTML = squared_array
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
