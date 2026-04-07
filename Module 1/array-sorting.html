@@ -19,6 +19,7 @@
     <button type="button" class="btn btn-outline-success" onclick="find_square()">Find Square
 
     </button>
+    <button type="button" class="btn btn-outline-info" onclick="find_cube()">Find Cube</button>
 
 
 
@@ -47,6 +48,13 @@
             }
             let squared_array = numbers.map(square)
             document.getElementById("display").innerHTML = squared_array
+        }
+        function find_cube(){
+            function cube(n){
+                return n*n*n
+            }
+            let cubed_array = numbers.map(cube)
+            document.getElementById("display").innerHTML = cubed_array
         }
     </script>
 
