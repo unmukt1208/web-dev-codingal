@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <p>Ascending and Descending Values for Mapped Numbers</p>
     <p id="product_value"></p>
@@ -12,30 +14,32 @@
     <button onclick="descending()">Descending</button>
     <button onclick="multiply()">Multiply by 2</button>
     <script>
-        var numbers = [2,7,15,4,9,18]
-        
+        var numbers = [2, 7, 15, 4, 9, 18]
 
-        function ascending(){
-            numbers.sort(function(a,b ){
-                return a-b
+
+        function ascending() {
+            numbers.sort(function (a, b) {
+                return a - b
             })
-            document.getElementById("product_value").innerHTML=numbers
+            document.getElementById("product_value").innerHTML = numbers
         }
         function descending() {
-                numbers.sort(function (a, b) {
-                    return b - a
-                })
-                document.getElementById("product_value").innerHTML = numbers
+            numbers.sort(function (a, b) {
+                return b - a
+            })
+            document.getElementById("product_value").innerHTML = numbers
+        }
+        function multiply() {
+            function multip(n) {
+                return n * 2
             }
-            function multiply(){
-                function multiply(n){
-                    return n*2
-                }
-                document.getElementById("product_value").innerHTML=numbers
-            }
+            document.getElementById("product_value").innerHTML = numbers.map(multip)
+        }
+       
 
 
-    
+
     </script>
 </body>
+
 </html>
