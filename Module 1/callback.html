@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+    <h1>Callback</h1>
+    <p id="output"></p>
+    <script>
+        function display(temp){
+            document.getElementById("output").innerHTML=temp
+        }
+
+        
+
+
+
+
+        function convertToF(celsius,callback_func) {
+            let fahrenheit = celsius * 9 / 5 + 32;
+            callback_func(fahrenheit)
+        }
+
+
+
+        convertToF(30,display);
+    </script>
+</body>
+
+</html>

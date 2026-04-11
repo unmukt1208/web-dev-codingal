@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <h1>JSON</h1>
+    <p id="output"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <script>
+
+    let student={
+        name:"Jack",
+        age:12,
+        grade:7,
+        fav_subject:"maths",
+        city:"Hannover"
+
+    }
+    document.getElementById("output").innerHTML=student.name 
+    var st_json=JSON.stringify(student)
+    document.getElementById("output2").innerHTML=st_json.name
+    var st_2=JSON.parse(st_json)
+    document.getElementById("output3").innerHTML=st_2.name
+    </script>
+</body>
+</html>

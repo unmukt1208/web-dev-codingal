@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Await</title>
+</head>
+<body>
+   <h1>Async and Await</h1> 
+   <p id="output"></p>
+   <script>
+    function find_sum(n1,n2){
+        return n1+n2
+    }
+    async function  avg(n1,n2){
+        var sum=await find_sum(n1,n2)
+        var avg=sum/2
+        document.getElementById("output").innerHTML="The average of "+ n1 + " and "+ n2 + " is " + avg
+    }
+    avg(4,5)
+   </script>
+</body>
+</html>
