@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACP on Async</title>
+</head>
+<body>
+    <h1>ACP on Async</h1>
+    <p id="output"></p>
+    <script>
+        function find_mul(n1,n2){
+            return n1*n2
+        }
+        async function response(n1, n2){
+            var result = find_mul(n1,n2)
+            document.getElementById("output").innerHTML=result;
+        }
+        response(4,5)
+    </script>
+</body>
+</html>
