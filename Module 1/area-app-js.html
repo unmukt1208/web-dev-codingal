@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Area calculator in JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Area Calculator in JS</h1>
+
+    <script>
+        let shape=prompt('Which shapes area do you want to find?\n1. Triangle \n2. Square \n3. Circle \n4. Rectangle')
+        function find_area_triangle(){
+            const base=prompt('Enter base(number)')
+            const height=prompt('Enter height(number)')
+            const area=0.5*base*height
+            alert('Area of the triangle is '+ area)
+        }
+        function find_area_square(){
+            const length=prompt('Enter length of a side(number)')
+            const area=length*length
+            alert('Area of the square is '+ area)
+        }
+        function find_area_circle(){
+            const radius=prompt('Enter length of radius(number)')
+            const area=3.14*radius*radius
+            alert("Area of the circle is "+ area + '. PI was taken as 3.14')
+        }
+        function find_area_rectangle(){
+            const base=prompt("Enter length of base(number)")
+            const height = prompt("Enter length of height(number)")
+            const area=base*height
+            alert('Area of the rectangle is '+ area)
+        }
+        if(shape=="1"){
+            find_area_triangle()
+        }
+        if(shape=="2"){
+            find_area_square()
+        }
+        if(shape=="3"){
+            find_area_circle()
+        }
+        if(shape=='4'){
+            find_area_rectangle()
+        }
+        
+        
+       
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
