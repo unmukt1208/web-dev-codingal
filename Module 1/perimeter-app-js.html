@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perimeter Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>Perimeter Calculator</h1>
+    <script>let shape = prompt('Which shapes area do you want to find?\n1. Square \n2. Rectangle')
+    function find_perimeter_square(){
+        const base=prompt('What is the desired base length of your rectangle(number)')
+        
+        const perimeter=base*4
+        alert('Perimeter of square is '+ perimeter)
+    }
+     function find_perimeter_rectangle() {
+            const base = prompt('What is the desired base length of your rectangle(number)')
+            const height = prompt('What is the desired base length of your rectangle(number)')
+            const perimeter = (base*2)+(height*2)
+            alert('Perimeter of rectangle is ' + perimeter)
+        }
+       
+    if (shape == "1") {
+            find_perimeter_square()
+        }
+        if (shape == "2") {
+            find_perimeter_rectangle()
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
