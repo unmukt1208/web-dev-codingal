@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome_Using_JS</title>
+</head>
+
+<body>
+    <h1>Palindrome_Using_JS</h1>
+    <script>
+        let text = prompt("Enter text to find out if it is a palindrome or not.")
+        function check_palindrome(text) {
+            const formatted_text = text.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+            const reversed_text=formatted_text.split("").reverse().join("")
+            return formatted_text===reversed_text
+        }
+        if (check_palindrome(text)) {
+            alert("Your provided text is a palindrome")
+        } else {
+            alert("Your provided text is not a palindrome")
+        }
+    </script>
+
+</body>
+
+</html>
