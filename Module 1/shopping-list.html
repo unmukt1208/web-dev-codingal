@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do List using JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="p-5">
+    <h1>To-Do List using JS</h1><br>
+    <h3>Add your To-Do List here</h3>
+
+    <div class="input-group my-5">
+        <input type="text" class="form-control" placeholder="Add Things" aria-label="Add Things"
+            aria-describedby="button-addon2" id="task_input">
+        <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="add_todo()">Add</button>
+    </div>
+    <h3>Your To-Do List:</h3><br>
+    <ul id="list"></ul>
+    <script>
+        function delete_todo(delete_button) {
+            var list_item = delete_button.parentNode
+            list_item.remove()
+        }
+        function add_todo() {
+            var task = document.getElementById("task_input")
+            var task_input = task.value
+            if (task_input != "") {
+                var list = document.getElementById("list")
+                var list_item = document.createElement("li")
+                list_item.innerHTML = task_input + ' <button type="button" onclick="delete_todo(this)" class="btn btn-danger m-3 p-1">Delete</button>'
+                list.appendChild(list_item)
+                task.value = ""
+            }
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
