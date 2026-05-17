@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rolling Dice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .shake {
+            animation: shake 0.1s infinite;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translate(2px, 2px) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(-2px, -2px) rotate(-5deg);
+            }
+
+            50% {
+                transform: translate(2px, -2px) rotate(5deg);
+            }
+
+            75% {
+                transform: translate(-2px, 2px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(2px, 2px) rotate(0deg);
+            }
+        }
+
+        #output_text {
+            font-size: 24px;
+            margin-top: 20px;
+            height: 30px;
+            color: #feca57;
+            font-weight: bold;
+        }
+
+        .win {
+            color: #1dd1a1 !important;
+            transform: scale(1.2);
+            transition: 0.3s;
+        }
+
+
+
+
+
+        button:active {
+            transform: scale(0.9);
+        }
+        .dice{
+            font-size: 8rem;
+            color: rgb(17, 78, 131);
+            
+        }
+    </style>
+</head>
+
+<body class="text-bg-dark">
+    <h1>Rolling Dice</h1>
+    <div
+        class="container-md rounded-4 p-3 w-50 py-4 d-flex flex-column justify-content-center align-items-center bg-black border border-warning">
+        <h4 class="text-white" id="title_msg">Get Ready to Roll!</h2> <br>
+            <div class="w-25 h-25 bg-light p-3 rounded-4 d-flex justify-content-center align-items-center dice"
+                id="dice">?</div> <br>
+            <button type="button" class="btn btn-danger" onclick="roll()">Roll</button> <br>
+            <p id="output_text" class="fs-2"></p>
+
+    </div>
+    <script>
+        const dice_array = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+        function roll() {
+            const dice_element = document.getElementById("dice")
+            const output = document.getElementById("output_text")
+            output.innerText = "Rolling"
+            output.classList.remove("win")
+            const title_msg = document.getElementById("title_msg")
+            dice_element.classList.add("shake")
+            setTimeout(() => {
+                dice_element.classList.remove("shake")
+                const val = Math.floor(Math.random() * 6)
+                dice_element.innerText = dice_array[val]
+                
+               
+                if (val === 5) {
+                    output.innerText = "Jackpot!"
+                    output.classList.add("win")
+                    title_msg.innerText = "Congratulations!"
+                }
+                else if (val === 0) {
+                    output.innerText = "Snake Eye"
+                    output.style.color="red"
+                    title_msg.innerText = "Ouch, that was Unlucky!"
+                }
+                else {
+                    output.innerText = "You rolled a " + (val + 1)
+                    title_msg.innerText = "Try Again!"
+                }
+
+            }, 600);
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
