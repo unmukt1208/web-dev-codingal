@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        #banner {
+            background: linear-gradient(to top right, #f7f5f6, #f2e33e);
+        }
+
+        #h1 {
+            font-size: 5rem;
+            font-weight: 700;
+        }
+
+        #Heading_about_me {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        #p2 {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        #projects {
+            background-color: #f5fac6;
+        }
+
+        #my_best_projects {
+            font-size: 3rem;
+            font-weight: 700
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-primary bg-primary p-2" data-bs-theme="dark">
+        <div class="container-fluid text-white">
+            <a class="navbar-brand" href="#banner">Unmukt Mishra</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="card text-center vh-100 d-flex align-items-center justify-content-center" id="banner">
+        <div>
+            <h1 id="h1">Hi, I'm <span class="text-primary">Unmukt</span></h1> <br>
+            <h3 class="text-success">I build <span class="text-primary">Creative Solutions</span></h3>
+            <div class="d-flex align-items-center justify-content-center gap-3 p-3"><a class="btn btn-primary btn-lg"
+                    href="#projects" role="button">View my Work</a>
+                <a class="btn btn-secondary btn-lg" href="#contact" role="button">Contact Me</a>
+            </div>
+        </div>
+    </section>
+    <section class="text-center p-5" id="about">
+        <h1 id="Heading_about_me">About Me</h1>
+        <div class="container-md d-flex gap-5">
+            <div class="p-5 w-50">
+                <p class="lead">I am a passionate software developer in building scalable web applications and robust
+                    backend systems.</p>
+                <p id="p2">With experience in the full software development cycle, I focus on writing clean, efficient
+                    code and creating intuitive user experiences. I thrive on solving complex technical challenges.</p>
+            </div>
+            <div class="w-50">
+                <h4>Core Technologies</h3>
+                    <div class="">
+
+                        <span class="badge text-bg-secondary fs-6 m-2">HTML5/CSS</span>
+                        <span class="badge text-bg-success fs-6 m-2">JavaScript</span>
+                        <span class="badge text-bg-warning fs-6 m-2">Scratch</span>
+                        <span class="badge text-bg-danger fs-6 m-2">MIT App Inventor</span>
+                        <span class="badge text-bg-info fs-6 m-2">Machine Learning for Kids</span>
+                        <span class="badge text-bg-light fs-6 m-2">Python</span>
+                        <span class="badge text-bg-dark fs-6 m-2">GitHub</span>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="text-center py-5" id="projects">
+        <h1 class="" id="my_best_projects">My Best Projects</h1>
+        <div class="container text-center p-5">
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://www.toxel.com/wp-content/uploads/2011/03/calculator05.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">QuickCalcPro</h5>
+                            <p class="card-text">A responsive calculator performing basic arithmetic operations
+                                instantly with interactive buttons, clean styling, and
+                                smooth user experience.</p>
+                            <a href="https://github.com/unmukt1208/web-dev-codingal/blob/main/Module%201/simple-calculator.html
+" class="btn btn-primary">View Source Code <i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://www.toxel.com/wp-content/uploads/2011/03/calculator05.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">SecureAge Gateway</h5>
+                            <p class="card-text">A verification form checking user age eligibility instantly while providing responsive feedback and clean interactive
+                            design elements.</p>
+                            <a href="https://github.com/unmukt1208/web-dev-codingal/blob/main/Module%201/age_verification_form.html
+" class="btn btn-primary">View Source Code <i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://www.toxel.com/wp-content/uploads/2011/03/calculator05.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Lucky Roll Simulator</h5>
+                            <p class="card-text">An animated virtual dice roller generating random outcomes with engaging visuals, interactive controls, and realistic
+                            gameplay excitement.</p>
+                            <a href="https://github.com/unmukt1208/web-dev-codingal/blob/main/Module%201/rolling-dice.html
+" class="btn btn-primary">View Source Code <i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://www.toxel.com/wp-content/uploads/2011/03/calculator05.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">SmartForm Checker</h5>
+                            <p class="card-text">A user-friendly validation system ensuring accurate input fields using JavaScript error handling and responsive
+                            Bootstrap design.</p>
+                            <a href="https://github.com/unmukt1208/web-dev-codingal/blob/main/Module%201/form-validation.html
+" class="btn btn-primary">View Source Code <i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://www.toxel.com/wp-content/uploads/2011/03/calculator05.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">TimeSync Digital Clock</h5>
+                            <p class="card-text">A live digital clock displaying real-time hours, minutes, and seconds with stylish formatting and dynamic JavaScript
+                            updates.</p>
+                            <a href="https://github.com/unmukt1208/web-dev-codingal/blob/main/Module%201/digital-clock.html
+" class="btn btn-primary">View Source Code <i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://www.toxel.com/wp-content/uploads/2011/03/calculator05.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Navigator Showcase Hub</h5>
+                            <p class="card-text">An interactive webpage featuring Bootstrap carousel animations and scrollspy navigation for smooth section-based
+                            browsing experiences.</p>
+                            <a href="https://github.com/unmukt1208/web-dev-codingal/blob/main/Module%201/carousel-and-scrollspy.html
+" class="btn btn-primary">View Source Code <i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
