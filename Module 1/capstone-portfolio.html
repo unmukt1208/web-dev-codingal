@@ -57,7 +57,7 @@
     <section class="card text-center vh-100 d-flex align-items-center justify-content-center" id="banner">
         <div>
             <h1 id="h1">Hi, I'm <span class="text-primary">Unmukt</span></h1> <br>
-            <h3 class="text-success">I build <span class="text-primary">Creative Solutions</span></h3>
+            <h3 class="text-success">I build <span class="text-primary typing-text"></span></h3>
             <div class="d-flex align-items-center justify-content-center gap-3 p-3"><a class="btn btn-primary btn-lg"
                     href="#projects" role="button">View my Work</a>
                 <a class="btn btn-secondary btn-lg" href="#contact" role="button">Contact Me</a>
@@ -94,7 +94,7 @@
         <div class="container text-center p-5">
             <div class="row mb-3">
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card h-100" style="width: 18rem;">
                         <img src="https://www.toxel.com/wp-content/uploads/2011/03/calculator05.jpg"
                             class="card-img-top" alt="...">
                         <div class="card-body">
@@ -109,7 +109,7 @@
 
                 </div>
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card h-100" style="width: 18rem;">
                         <img src="https://assets.justinmind.com/wp-content/uploads/2019/04/form-examples-for-inspiration.png"
                             class="card-img-top" alt="...">
                         <div class="card-body">
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card h-100" style="width: 18rem;">
                         <img src="https://images.pexels.com/photos/9065481/pexels-photo-9065481.jpeg?_gl=1*5qn7yv*_ga*MTc5MDA2NDM0NC4xNzgwMjQ5NTkx*_ga_8JE65Q40S6*czE3ODAzMjI1OTMkbzMkZzAkdDE3ODAzMjI1OTMkajYwJGwwJGgw"
                             class="card-img-top" alt="...">
                         <div class="card-body">
@@ -137,9 +137,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row m-5">
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card h-100" style="width: 18rem;">
                         <img src="https://play-lh.googleusercontent.com/zmhcGMvhy-tAD11jHgKZOaj0jZzvv_fEgZDk96_VstgdmWNcUjDw3035xFmk2AvEcNk32OzpWixXItNmrRzs=w480-h960-rw"
                             class="card-img-top" alt="...">
                         <div class="card-body">
@@ -153,7 +153,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card h-100" style="width: 18rem;">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Digital-clock-alarm.jpg"
                             class="card-img-top" alt="...">
                         <div class="card-body">
@@ -167,7 +167,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card h-100" style="width: 18rem;">
                         <img src="https://wpbeaches.com/wp-content/uploads/2015/12/carousel-acf-slider.png"
                             class="card-img-top" alt="...">
                         <div class="card-body">
@@ -183,9 +183,9 @@
             </div>
         </div>
     </section>
-    <section class="text-center py-5" id="contact">
+    <section class="text-center pt-5" id="contact">
         <h1 id="contact_text">Get in Touch</h1>
-        <div class="container d-flex flex-column text-center mx-5 m-5 gap-5">
+        <div class="container d-flex flex-column text-center mt-5 gap-5">
             <div class="d-flex align-items-center justify-content-center gap-3">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Name" aria-label="Name"
@@ -202,20 +202,89 @@
             <div class="input-group">
                 <span class="input-group-text">Message:</span>
                 <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div> <div class="m-5">
+                <div><button type="button" class="btn btn-primary">Send Message</button></div>
             </div>
-            <div><button type="button" class="btn btn-primary">Send Message</button></div>
+            
         </div>
-        <footer class="bg-primary p-5 container-fluid fs-2 text-light">
+        <footer class="bg-primary p-5 pb-5 container-fluid fs-2 text-light">
             <div class="text-center text-light gap-4 d-flex align-items-center justify-content-center">
-                <i class="bi bi-github"></i>
-                <i class="bi bi-whatsapp"></i>
-                <i class="bi bi-youtube"></i>
+                <a href="https://github.com/unmukt1208" class="text-white"><i class="bi bi-github"></i></a>
+                <a href="https://wa.me/4915231346197" class="text-white"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.youtube.com/@somerandomguy_1208" class="text-white"><i class="bi bi-youtube"></i></a>
+                
+                
+                
             </div>
             <p class="fs-6 m-4">© 2026 Unmukt. Built with hardwork and determination.</p>
         </footer>
       
 
     </section>
+    <script>
+        const words = ["Web Applications.", "Backend Systems.", "Clean Code.", "Creative Solutions."];
+
+            let wordIndex = 0;
+
+            let charIndex = 0;
+
+            let isDeleting = false;
+
+            const typingSpeed = 100;
+
+            const deleteSpeed = 50;
+
+            const pauseTime = 2000;
+
+            const typingElement = document.querySelector('.typing-text');
+
+            function type() {
+
+                const currentWord = words[wordIndex];
+
+
+                if (isDeleting) {
+
+                    typingElement.textContent = currentWord.substring(0, charIndex - 1);
+
+                    charIndex--;
+
+                } else {
+
+                    typingElement.textContent = currentWord.substring(0, charIndex + 1);
+
+                    charIndex++;
+
+                }
+
+                let timeoutSpeed = isDeleting ? deleteSpeed : typingSpeed;
+
+                if (!isDeleting && charIndex === currentWord.length) {
+
+                    timeoutSpeed = pauseTime;
+
+                    isDeleting = true;
+
+                } else if (isDeleting && charIndex === 0) {
+
+                    isDeleting = false;
+
+                    wordIndex = (wordIndex + 1) % words.length;
+
+                    timeoutSpeed = 500; // Pause before typing next word
+
+                }
+
+                setTimeout(type, timeoutSpeed);
+
+            }
+
+
+
+            document.addEventListener('DOMContentLoaded', type);
+        
+
+    </script>
 
 
 
